@@ -35,6 +35,9 @@ public class Recipe {
   @Lob
   private Byte[] image;
 
+  @Enumerated(value = EnumType.STRING)
+  private Difficulty difficulty;
+
   // CASCADE  Control how state changes are cascaded
   //from parent objects to child objects
   @OneToOne(cascade = CascadeType.ALL)

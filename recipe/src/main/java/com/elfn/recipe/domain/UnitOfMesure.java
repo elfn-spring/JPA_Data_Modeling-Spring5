@@ -3,7 +3,6 @@ package com.elfn.recipe.domain;
 import lombok.*;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 /**
  * @PROJECT recipe
@@ -15,17 +14,10 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Ingredient {
-
+public class UnitOfMesure {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String description;
-  private BigDecimal amount;
 
-  @ManyToOne
-  private Recipe recipe;
-
-  @OneToOne(fetch = FetchType.EAGER)
-  private UnitOfMesure unitOfMesure;
 }

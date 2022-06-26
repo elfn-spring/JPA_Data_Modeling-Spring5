@@ -3,6 +3,7 @@ package com.elfn.recipe.domain;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * @PROJECT recipe
@@ -39,5 +40,8 @@ public class Recipe {
   @OneToOne(cascade = CascadeType.ALL)
   private Notes notes;
 
+// ALL Applies all cascade options (REMOVE, DETACH)
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+  private Set<Ingredient> ingredients;
 
 }

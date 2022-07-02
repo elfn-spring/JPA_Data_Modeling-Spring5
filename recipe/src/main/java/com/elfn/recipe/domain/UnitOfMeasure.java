@@ -14,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class UnitOfMesure {
+public class UnitOfMeasure {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
